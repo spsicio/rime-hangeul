@@ -1,0 +1,72 @@
+# Rime Schema
+# encoding: utf-8
+
+schema:
+  schema_id: hangeul
+  name: 諺文 한글
+  version: "2021.07.15"
+  author:
+    - spsicio <spsicio@foxmail.com>
+  description: |
+    羅馬字轉寫輸入諺文字母。
+
+switches:
+  - name: ascii_mode
+    states: [ 諺文, 西文 ]
+    reset: 0
+  - name: full_shape
+    states: [ 半角, 全角 ]
+    reset: 0
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+    reset: 0
+
+engine:
+  processors:
+    - ascii_composer
+    - recongizer
+    - speller
+    - key_binder
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+speller:
+  alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-'
+  delimiter: " '"
+  auto_select: true
+  algebra:
+    - derive/kk/gg/
+    - derive/tt/dd/
+    - derive/pp/bb/
+    - derive/cc/jj/
+    - derive/jj/zz/
+    - derive/^j([^j])/z$1/
+    - derive/cc/cch/
+    - derive/cc/tch/
+    - derive/^c([^c])/ch$1/
+    - derive/([gkndtrmbpsjch])y/$1i/
+    - derive/([gkndtrmbpsjch])w/$1u/
+    - derive/s([iy])/sh$1/
+    - derive/l/r/
+    - derive/^r/l/
+    - derive/ng$/gn/
+
+translator:
+  dictionary: hangeul
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
