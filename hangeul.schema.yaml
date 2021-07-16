@@ -4,11 +4,12 @@
 schema:
   schema_id: hangeul
   name: 諺文 한글
-  version: "2021.07.15"
+  version: "2021.07.16"
   author:
     - spsicio <spsicio@foxmail.com>
   description: |
-    羅馬字轉寫輸入諺文字母。
+    羅馬字轉寫輸入諺文。
+    收錄了諺文字母，諺文兼容字母和預組的 19 * 21 * 28 = 11172 個諺文音節。
 
 switches:
   - name: ascii_mode
@@ -52,9 +53,11 @@ speller:
     - derive/cc/jj/
     - derive/jj/zz/
     - derive/^j([^j])/z$1/
+    - derive/([nx])j/$1z/
     - derive/cc/cch/
     - derive/cc/tch/
     - derive/^c([^c])/ch$1/
+    - derive/xc/xch/
     - derive/([gkndtrmbpsjch])y/$1i/
     - derive/([gkndtrmbpsjch])w/$1u/
     - derive/s([iy])/sh$1/
