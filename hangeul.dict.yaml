@@ -6,7 +6,7 @@
 
 ---
 name: hangeul
-version: "2021.07.15"
+version: "2021.07.16"
 sort: original
 ...
 
@@ -108,27 +108,27 @@ sort: original
 ㅌ	xt
 ㅍ	xp
 ㅎ	xh
-ㅏ xa
-ㅐ xae
-ㅑ xya
-ㅒ xyae
-ㅓ xeo
-ㅔ xe
-ㅕ xyeo
-ㅖ xye
-ㅗ xo
-ㅘ xwa
-ㅙ xwae
-ㅚ xoe
-ㅛ xyo
-ㅜ xu
-ㅝ xweo
-ㅞ xwe
-ㅟ xwi
-ㅠ xyu
-ㅡ xeu
-ㅢ xui
-ㅣ xi
+ㅏ	xa
+ㅐ	xae
+ㅑ	xya
+ㅒ	xyae
+ㅓ	xeo
+ㅔ	xe
+ㅕ	xyeo
+ㅖ	xye
+ㅗ	xo
+ㅘ	xwa
+ㅙ	xwae
+ㅚ	xoe
+ㅛ	xyo
+ㅜ	xu
+ㅝ	xweo
+ㅞ	xwe
+ㅟ	xwi
+ㅠ	xyu
+ㅡ	xeu
+ㅢ	xui
+ㅣ	xi
 가	ga
 각	gag
 갂	gakk

@@ -92,7 +92,7 @@ for s in range(1, 28):
     elif cHan[s] == 'ㅂ': fout.write('ㅃ\txpp\n')
     elif cHan[s] == 'ㅈ': fout.write('ㅉ\txcc\n')
 for i in range(21):
-    fout.write(f'{vHan[i]} x{infix[i]}\n')
+    fout.write(f'{vHan[i]}\tx{infix[i]}\n')
 
 for p in range(19):
     for i in range(21):
